@@ -79,6 +79,20 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+.project-image {
+    margin-bottom: 15px;
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+}
+
+.pixel-image {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto;
+}
+
 .btn {
     display: inline-block;
     padding: 8px 16px;
