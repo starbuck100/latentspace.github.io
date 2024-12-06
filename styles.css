@@ -72,33 +72,20 @@ nav a:hover {
 
 /* Section Styles */
 section {
-    margin: 0;
+    margin: 2rem auto;
     padding: 2rem;
     border: 4px solid var(--border-color);
     background-color: rgba(42, 42, 74, 0.3);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    max-width: 1200px;
 }
 
 #about {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    align-items: start;
 }
 
-.pixel-text {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--secondary-color);
-    text-shadow: 2px 2px 0 var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5em;
-}
-
-/* About Section Styles */
 .about-content {
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(400px, 2fr);
@@ -107,33 +94,36 @@ section {
 }
 
 .about-text {
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: rgba(26, 26, 46, 0.6);
     border: 2px solid var(--border-color);
     border-radius: 4px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
 }
 
 .about-text p {
-    margin-bottom: 1rem;
     line-height: 1.6;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 /* Skills Section */
 .skills-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .skill-tree {
     background-color: rgba(26, 26, 46, 0.6);
     border: 2px solid var(--border-color);
     border-radius: 4px;
-    padding: 1.5rem;
+    padding: 2rem;
+    min-height: 200px;
 }
 
 .tree-branch {
@@ -147,9 +137,8 @@ section {
 .branch-title {
     color: var(--secondary-color);
     font-weight: bold;
-    cursor: pointer;
-    display: block;
-    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+    margin-bottom: 1rem;
 }
 
 .branch-items {
@@ -159,7 +148,8 @@ section {
 }
 
 .branch-items li {
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
+    font-size: 1em;
 }
 
 /* Project Styles */
@@ -232,7 +222,7 @@ section {
     }
     
     section {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     
     #about {
@@ -246,6 +236,15 @@ section {
     
     .skills-section {
         grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .skill-tree {
+        padding: 1.5rem;
     }
 }
 
