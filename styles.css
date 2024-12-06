@@ -160,10 +160,36 @@ nav a:hover {
     margin-top: 20px;
     font-family: 'Courier New', monospace;
     padding: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) var(--background-color);
+}
+
+.skill-tree::-webkit-scrollbar {
+    width: 8px;
+}
+
+.skill-tree::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+.skill-tree::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.separator {
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 15px 0;
+    opacity: 0.6;
+    font-family: monospace;
 }
 
 .tree-branch {
-    margin-bottom: 20px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
 }
 
 .branch-title {
@@ -171,12 +197,25 @@ nav a:hover {
     color: var(--secondary-color);
     display: block;
     margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.branch-title:hover {
+    color: var(--text-color);
+}
+
+.toggle-icon {
+    float: right;
+    font-family: monospace;
 }
 
 .branch-items {
     list-style: none;
     padding-left: 20px;
     margin: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .branch-items li {
@@ -189,6 +228,14 @@ nav a:hover {
     color: var(--secondary-color);
     transform: translateX(5px);
     transition: all 0.3s ease;
+}
+
+.collapsible.collapsed .branch-items {
+    max-height: 0;
+}
+
+.collapsible.collapsed .toggle-icon {
+    content: "[+]";
 }
 
 @media (max-width: 768px) {
