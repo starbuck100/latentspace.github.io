@@ -156,6 +156,41 @@ nav a:hover {
     cursor: default;
 }
 
+.skill-tree {
+    margin-top: 20px;
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+}
+
+.tree-branch {
+    margin-bottom: 20px;
+}
+
+.branch-title {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.branch-items {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.branch-items li {
+    color: var(--text-color);
+    padding: 4px 0;
+    white-space: pre;
+}
+
+.branch-items li:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
